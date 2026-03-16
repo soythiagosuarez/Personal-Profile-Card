@@ -9,11 +9,25 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #0059F7 0%, #002C79 100%);
     min-height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     color: #333;
+    overflow-x: hidden;
+}
+
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
@@ -21,6 +35,7 @@ body {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    z-index: 1;
 }
 
 /* ===== TARJETA DE PERFIL ===== */
@@ -30,8 +45,8 @@ body {
     border-radius: 24px;
     padding: 32px;
     box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.1),
-        0 8px 16px rgba(0, 0, 0, 0.1);
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        0 8px 16px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -59,7 +74,7 @@ body {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #0059F7;
+    border: 4px solid #00acff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -101,10 +116,10 @@ body {
 .section-title {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     font-size: 20px;
     font-weight: 600;
-    color: #1976d2;
+    color: #00acff;
     margin-bottom: 20px;
     padding-bottom: 8px;
     border-bottom: 2px solid #e3f2fd;
@@ -112,7 +127,7 @@ body {
 
 .section-title .material-icons {
     font-size: 24px;
-    color: #1976d2;
+    color: #ffffff;
 }
 
 /* ===== SECCIÓN DE HABILIDADES ===== */
@@ -128,24 +143,25 @@ body {
 }
 
 .skill-item {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background: #ffffff0a;
     padding: 16px;
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid #e3f2fd;
+    border: 1px solid #005eff;
 }
 
 .skill-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(25, 118, 210, 0.2);
-    background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);
+    background: #005cff30;
+    border: 1px solid #00acff;
 }
 
 .skill-name {
     font-size: 16px;
     font-weight: 500;
-    color: #1976d2;
+    color: #ffffff;
 }
 
 /* ===== SECCIONES DE FAVORITOS ===== */
@@ -299,12 +315,13 @@ body {
 /* ===== ESTILOS PARA MODO OSCURO (OPCIONAL) ===== */
 @media (prefers-color-scheme: dark) {
     .profile-card {
-        background: rgba(30, 30, 30, 0.95);
+        background: rgb(0 44 122);
+        border: 2px solid #ffffff7d;
         color: #fff;
     }
     
     .profile-name {
-        color: #0059F7;
+        color: #00acff;
     }
     
     .profile-lastname {
@@ -316,11 +333,11 @@ body {
     }
     
     .favorite-item {
-        background: #424242;
+        background: #003696;
         color: #e0e0e0;
     }
     
     .favorite-item:hover {
-        background: #616161;
+        background: #0046c3;
     }
 } 
