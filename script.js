@@ -158,54 +158,54 @@ document.addEventListener('DOMContentLoaded', function() {
     //     setTimeout(() => {
     //         typeWriter(profileName, originalText, 150);
     //     }, 1000);
-    // }
+    //}
     
-    // ===== FUNCIÓN PARA MOSTRAR MENSAJE DE BIENVENIDA =====
-    function showWelcomeMessage() {
-        const welcomeDiv = document.createElement('div');
-        welcomeDiv.className = 'welcome-message';
-        welcomeDiv.innerHTML = `
-            <div class="welcome-content">
-                <span class="material-icons">👋</span>
-                <p>¡Bienvenido a mi perfil!</p>
-            </div>
-        `;
+    // ===== FUNCIÓN PARA MOSTRAR MENSAJE DE BIENVENIDA (descomentar si quiero volver activarlo)=====
+    //function showWelcomeMessage() {
+    //    const welcomeDiv = document.createElement('div');
+    //    welcomeDiv.className = 'welcome-message';
+    //    welcomeDiv.innerHTML = `
+    //        <div class="welcome-content">
+    //            <span class="material-icons">👋</span>
+    //            <p>¡Bienvenido a mi perfil!</p>
+    //        </div>
+    //    `;
+    //    
+    //    // Estilos para el mensaje de bienvenida
+    //    welcomeDiv.style.cssText = `
+    //        position: fixed;
+    //        top: 20px;
+    //       right: 20px;
+    //        background: rgba(25, 118, 210, 0.9);
+    //        color: white;
+    //        padding: 12px 20px;
+    //        border-radius: 25px;
+    //        font-size: 14px;
+    //        font-weight: 500;
+    //        z-index: 1000;
+    //        transform: translateX(100%);
+    //        transition: transform 0.5s ease;
+    //       backdrop-filter: blur(10px);
+    //    `;
         
-        // Estilos para el mensaje de bienvenida
-        welcomeDiv.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(25, 118, 210, 0.9);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 500;
-            z-index: 1000;
-            transform: translateX(100%);
-            transition: transform 0.5s ease;
-            backdrop-filter: blur(10px);
-        `;
-        
-        document.body.appendChild(welcomeDiv);
+    //    document.body.appendChild(welcomeDiv);
         
         // Mostrar mensaje
-        setTimeout(() => {
-            welcomeDiv.style.transform = 'translateX(0)';
-        }, 1000);
+    //    setTimeout(() => {
+    //        welcomeDiv.style.transform = 'translateX(0)';
+    //    }, 1000);
         
         // Ocultar mensaje después de 3 segundos
-        setTimeout(() => {
-            welcomeDiv.style.transform = 'translateX(100%)';
-            setTimeout(() => {
-                document.body.removeChild(welcomeDiv);
-            }, 500);
-        }, 4000);
-    }
+    //    setTimeout(() => {
+    //        welcomeDiv.style.transform = 'translateX(100%)';
+    //        setTimeout(() => {
+    //            document.body.removeChild(welcomeDiv);
+    //        }, 500);
+    //    }, 4000);
+    //}
     
     // Mostrar mensaje de bienvenida
-    setTimeout(showWelcomeMessage, 1500);
+    //setTimeout(showWelcomeMessage, 1500);
     
     // ===== CONSOLA DE AYUDA PARA DESARROLLADORES =====
     console.log(`
